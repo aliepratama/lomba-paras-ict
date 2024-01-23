@@ -1,0 +1,15 @@
+{
+  "name": "lomba-paras-ict",
+  "version": "1.0.0",
+  "description": "Repo untuk menyimpan projek web design untuk lomba PARAS ICT IX dari INSTIKI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
