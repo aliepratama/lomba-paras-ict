@@ -1,4 +1,5 @@
 import './components/navbar.js';
+import './components/herosection.js';
 
 class App extends HTMLElement {
     connectedCallback() {
@@ -7,6 +8,7 @@ class App extends HTMLElement {
     _render(){
         this.innerHTML = `
         <nav-bar></nav-bar>
+        <hero-section></hero-section>
         `;
     }
 }

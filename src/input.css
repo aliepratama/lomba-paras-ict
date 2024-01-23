@@ -6,6 +6,13 @@
   /* * {
     border: 0.5px grey solid;
   } */
+  .container-shadow {
+    box-shadow: 0 1px 5px #0c0c0c14, 0 0 20px #0c0c0c04;
+  }
+  .container-shadow:hover,
+  .container-shadow:focus-within {
+    box-shadow: 0 2px 12px #0c0c0c26, 0 0 20px #0c0c0c06;
+  }
 }
 
 @layer components {
@@ -18,6 +25,12 @@
   .button-fill-rg {
     @apply w-fit px-3 py-2 rounded-xl lg:text-xl bg-primary font-semibold  text-fwhite hover:bg-primaryhover;
   }
+  .heading1 {
+    @apply text-2xl text-center lg:text-left lg:text-5xl font-serif text-fblack max-w-2xl lg:leading-relaxed;
+  }
+  .regular-text {
+    @apply text-lg lg:text-2xl text-center lg:text-left;
+  }
   .container-rg {
     @apply bg-white border border-lwhite;
   }
@@ -26,5 +39,11 @@
   }
   .hidden-lg {
     @apply block lg:!hidden;
+  }
+  .input-text-rg {
+    @apply container-rg rounded-xl container-shadow focus-within:border focus-within:border-fblack;
+  }
+  .prevent-input-text {
+    @apply focus:border-0 focus:outline-none;
   }
 }

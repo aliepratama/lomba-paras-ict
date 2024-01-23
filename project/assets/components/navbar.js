@@ -15,15 +15,15 @@ class NavBar extends HTMLElement {
     _render(){
         this.innerHTML = `
             ${this.__isSidebar ? '<side-bar></side-bar>' : ''}
-            <div class="w-full flex items-center justify-between px-3 lg:px-12 py-3 container-rg">
+            <div class="w-full flex items-center justify-between px-3 lg:px-12 py-4 container-rg">
                 <ul class="flex items-center gap-x-5 lg:gap-x-12">
                     <i id="sidebar" class="hidden-lg fa fa-bars button-span-rg"></i>
                     <img
-                        class="max-h-5 hidden-lg" 
+                        class="max-h-6 hidden-lg" 
                         src="assets/public/minilogo.png" 
                         alt="Logo eLibrary"/>
                     <img
-                        class="max-h-16 hidden-m" 
+                        class="max-h-12 hidden-m" 
                         src="assets/public/logo.png" 
                         alt="Logo eLibrary"/>
                     <li class="hidden-m button-span-rg-active">Beranda</li>
