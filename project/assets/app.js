@@ -9,8 +9,10 @@ class App extends HTMLElement {
     _render(){
         this.innerHTML = `
         <nav-bar></nav-bar>
-        <hero-section></hero-section>
-        <categories-section></categories-section>
+        <div class="mt-20 lg:mt-14">
+            <hero-section></hero-section>
+            <categories-section></categories-section>
+        </div>
         `;
     }
 }

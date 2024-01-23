@@ -4,7 +4,7 @@ class SideBar extends HTMLElement {
     }
     _render(){
         this.innerHTML = `
-            <div class="fixed w-full bg-white h-[100vh] flex flex-col justify-between hidden-lg p-6">
+            <div class="fixed z-50 top-0 w-full bg-white h-[100vh] flex flex-col justify-between hidden-lg p-6">
                 <div class="w-full flex flex-col">
                     <div class="w-full flex justify-between">
                         <span>Menu</span>
