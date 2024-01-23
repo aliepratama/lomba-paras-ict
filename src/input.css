@@ -16,9 +16,15 @@
     @apply text-xl text-fblack cursor-pointer hover:text-primary;
   }
   .button-fill-rg {
-    @apply w-fit px-3 py-2 rounded-xl text-xl bg-primary font-semibold  text-fwhite hover:bg-primaryhover;
+    @apply w-fit px-3 py-2 rounded-xl lg:text-xl bg-primary font-semibold  text-fwhite hover:bg-primaryhover;
   }
   .container-rg {
     @apply bg-white border border-lwhite;
+  }
+  .hidden-m {
+    @apply hidden lg:block;
+  }
+  .hidden-lg {
+    @apply block lg:!hidden;
   }
 }
