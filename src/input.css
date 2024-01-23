@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /* * {
+    border: 0.5px grey solid;
+  } */
+}
+
+@layer components {
+  .button-span-rg-active {
+    @apply text-xl text-primary cursor-pointer;
+  }
+  .button-span-rg {
+    @apply text-xl text-fblack cursor-pointer hover:text-primary;
+  }
+  .button-fill-rg {
+    @apply w-fit px-3 py-2 rounded-xl text-xl bg-primary font-semibold  text-fwhite hover:bg-primaryhover;
+  }
+  .container-rg {
+    @apply bg-white border border-lwhite;
+  }
+}
