@@ -1,5 +1,6 @@
 import './components/navbar.js';
 import './components/herosection.js';
+import './components/categoriessection.js';
 
 class App extends HTMLElement {
     connectedCallback() {
@@ -9,6 +10,7 @@ class App extends HTMLElement {
         this.innerHTML = `
         <nav-bar></nav-bar>
         <hero-section></hero-section>
+        <categories-section></categories-section>
         `;
     }
 }

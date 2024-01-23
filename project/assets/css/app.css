@@ -693,6 +693,10 @@ video {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .h-\[100vh\] {
   height: 100vh;
 }
@@ -713,12 +717,36 @@ video {
   max-height: 20rem;
 }
 
+.w-\[140px\] {
+  width: 140px;
+}
+
 .w-full {
   width: 100%;
 }
 
+.max-w-20 {
+  max-width: 5rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
+}
+
+.place-content-between {
+  place-content: space-between;
+}
+
+.place-items-center {
+  place-items: center;
 }
 
 .items-center {
@@ -765,6 +793,10 @@ video {
   row-gap: 1.75rem;
 }
 
+.gap-y-8 {
+  row-gap: 2rem;
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -784,11 +816,6 @@ video {
   padding-right: 1rem;
 }
 
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -804,8 +831,27 @@ video {
   padding-bottom: 1.75rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .text-left {
   text-align: left;
+}
+
+.font-serif {
+  font-family: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -827,9 +873,23 @@ video {
   color: rgb(222 27 81 / var(--tw-text-opacity));
 }
 
+.hover\:scale-105:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 @media (min-width: 1024px) {
+  .lg\:flex {
+    display: flex;
+  }
+
   .lg\:items-start {
     align-items: flex-start;
+  }
+
+  .lg\:justify-between {
+    justify-content: space-between;
   }
 
   .lg\:gap-x-12 {
@@ -869,8 +929,23 @@ video {
     padding-right: 1.5rem;
   }
 
+  .lg\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
   .lg\:py-5 {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
