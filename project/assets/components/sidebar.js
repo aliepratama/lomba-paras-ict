@@ -8,7 +8,11 @@ class SideBar extends HTMLElement {
                 <div class="w-full flex flex-col">
                     <div class="w-full flex justify-between">
                         <span>Menu</span>
-                        <i id="closeSidebar" class="fa fa-times button-span-rg"></i>
+                        <i 
+                        id="closeSidebar" 
+                        aria-label="Kembali ke halaman"
+                        title="Kembali"
+                        class="fa fa-times button-span-rg"></i>
                     </div>
                     <ul class="w-full flex flex-col gap-y-7 py-7">
                         <li class="button-span-rg font-bold">Beranda</li>
