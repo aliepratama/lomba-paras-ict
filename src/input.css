@@ -6,6 +6,9 @@
   /* * {
     border: 0.5px grey solid;
   } */
+  html {
+    overflow-x: hidden;
+  }
   .container-shadow {
     box-shadow: 0 1px 5px #0c0c0c14, 0 0 20px #0c0c0c04;
   }
@@ -50,7 +53,7 @@
     @apply text-ellipsis overflow-hidden whitespace-nowrap text-fblack;
   }
   .badge-rating {
-    @apply after:absolute after:text-3xl after:font-bold after:bg-primary after:text-white after:px-4 after:py-3 after:rounded-3xl after:-mt-14 after:-mr-64 lg:after:-mr-80;
+    @apply after:absolute after:text-3xl after:font-bold after:bg-primary after:text-white after:px-4 after:py-3 after:rounded-3xl after:-mt-[27rem] lg:after:-mt-[33rem] after:ml-48 lg:after:ml-60;
   }
   .slider-button {
     @apply w-fit h-fit text-primary container-rg container-shadow py-4 px-6 rounded-full z-10;

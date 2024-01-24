@@ -26,6 +26,14 @@ class TrendingSection extends HTMLElement {
                 category: 'Filsafat',
                 rating: '4.9',
             },
+            {
+                id: 4,
+                image: './assets/public/book1.png',
+                title: 'Filosofi Teras: Filsafat Yunani',
+                author: 'Henry Manampiring',
+                category: 'Filsafat',
+                rating: '4.9',
+            },
         ];
     }
     connectedCallback() {
@@ -38,16 +46,16 @@ class TrendingSection extends HTMLElement {
                 <h4 class="text-2xl lg:text-3xl font-serif text-fblack">On Trending</h4>
                 <button class="text-xl lg:text-2xl text-primary">Lihat Semua</button>
             </div>
-            <div class="w-full flex justify-between items-center">
-                <button class="slider-button">
+            <div class="swiper w-full flex justify-between items-center">
+                <button class="slider-button swiper-button-prev">
                     <i class="fa fa-angle-left text-2xl lg:text-4xl"></i>
                 </button>
-                <div class="w-full flex flex-col lg:flex-row justify-between -mx-8">
+                <div class="swiper-wrapper w-2/3 lg:w-full flex flex-row justify-between -mx-8">
                 ${
                 String(this.__lists.map((val) => {
                     return `
                     <div 
-                        class="${val.id === 1 ? 'flex' : 'hidden lg:flex'} w-fit flex-col px-9 py-7 group cursor-pointer container-rg container-shadow rounded-[40px] items-center gap-y-4 after:content-[attr(number)] badge-rating"
+                        class="swiper-slide w-fit flex-col px-9 py-7 group cursor-pointer container-rg container-shadow rounded-[40px] items-center gap-y-4 after:content-[attr(number)] badge-rating"
                         number="#${val.id}">
                         <div>
                             <img 
@@ -81,7 +89,7 @@ class TrendingSection extends HTMLElement {
                 })).replace(/,/g, '')
                 }
                 </div>
-                <button class="slider-button">
+                <button class="slider-button swiper-button-next">
                     <i class="fa fa-angle-right text-2xl lg:text-4xl"></i>
                 </button>
             </div>

@@ -22,4 +22,26 @@ class App extends HTMLElement {
 }
 document.addEventListener('DOMContentLoaded', () => {
     customElements.define('app-root', App);
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 3000,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            },
+            640: {
+                slidesPerView: 3,
+                spaceBetween: 40
+            }
+        }
+    });  
+    // const swiper_e = document.querySelector('.swiper').swiper;
+    // swiper_e.slideNext();
 });
