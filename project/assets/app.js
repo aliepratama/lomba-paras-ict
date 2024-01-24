@@ -2,6 +2,7 @@ import './components/navbar.js';
 import './components/herosection.js';
 import './components/categoriessection.js';
 import './components/servicessection.js';
+import './components/trendingsection.js';
 
 class App extends HTMLElement {
     connectedCallback() {
@@ -14,6 +15,7 @@ class App extends HTMLElement {
             <hero-section></hero-section>
             <categories-section></categories-section>
             <services-section></services-section>
+            <trending-section></trending-section>
         </div>
         `;
     }

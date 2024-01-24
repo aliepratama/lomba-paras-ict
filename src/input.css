@@ -46,4 +46,13 @@
   .prevent-input-text {
     @apply focus:border-0 focus:outline-none;
   }
+  .prevent-overflow-text {
+    @apply text-ellipsis overflow-hidden whitespace-nowrap text-fblack;
+  }
+  .badge-rating {
+    @apply after:absolute after:text-3xl after:font-bold after:bg-primary after:text-white after:px-4 after:py-3 after:rounded-3xl after:-mt-14 after:-mr-64 lg:after:-mr-80;
+  }
+  .slider-button {
+    @apply w-fit h-fit text-primary container-rg container-shadow py-4 px-6 rounded-full z-10;
+  }
 }
