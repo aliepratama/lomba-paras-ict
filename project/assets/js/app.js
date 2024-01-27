@@ -5,6 +5,7 @@ import '../components/servicessection.js';
 import '../components/trendingsection.js';
 import '../components/faqsection.js';
 import '../components/footer.js';
+import '../components/contactbutton.js';
 
 class App extends HTMLElement {
     connectedCallback() {
@@ -20,6 +21,7 @@ class App extends HTMLElement {
             <trending-section></trending-section>
             <faq-section></faq-section>
             <footer-section></footer-section>
+            <contact-button></contact-button>
         </div>
         `;
     }
