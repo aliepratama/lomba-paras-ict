@@ -35,7 +35,7 @@ class FaqSection extends HTMLElement {
         this.innerHTML = `
         <div class="w-full flex flex-col items-center gap-y-12 lg:gap-y-16 px-3 lg:px-24 py-8 lg:py-16">
             <h4 class="heading1">Frequently Asked Questions</h4>
-            <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-y-12 place-content-between">
+            <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-y-12 gap-x-8 place-content-between">
             ${
                 String(this.__qna.map((val) => {
                     return `
