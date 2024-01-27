@@ -1,8 +1,9 @@
-import './components/navbar.js';
-import './components/herosection.js';
-import './components/categoriessection.js';
-import './components/servicessection.js';
-import './components/trendingsection.js';
+import '../components/navbar.js';
+import '../components/herosection.js';
+import '../components/categoriessection.js';
+import '../components/servicessection.js';
+import '../components/trendingsection.js';
+import '../components/faqsection.js';
 
 class App extends HTMLElement {
     connectedCallback() {
@@ -16,20 +17,21 @@ class App extends HTMLElement {
             <categories-section></categories-section>
             <services-section></services-section>
             <trending-section></trending-section>
+            <faq-section></faq-section>
         </div>
         `;
     }
 }
 document.addEventListener('DOMContentLoaded', () => {
     customElements.define('app-root', App);
-    const swiper = new Swiper('.swiper', {
-        loop: true,
+    new Swiper('.swiper', {
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
         autoplay: {
             delay: 3000,
+            disableOnInteraction: false,
         },
         breakpoints: {
             320: {
@@ -38,10 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             640: {
                 slidesPerView: 3,
-                spaceBetween: 40
+                spaceBetween: 80
             }
         }
     });  
-    // const swiper_e = document.querySelector('.swiper').swiper;
-    // swiper_e.slideNext();
 });

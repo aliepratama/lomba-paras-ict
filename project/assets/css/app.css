@@ -819,6 +819,10 @@ html {
   z-index: 50;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .-mx-8 {
   margin-left: -2rem;
   margin-right: -2rem;
@@ -850,6 +854,10 @@ html {
 
 .h-\[100vh\] {
   height: 100vh;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .max-h-10 {
@@ -919,6 +927,10 @@ html {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -1017,6 +1029,11 @@ html {
 .bg-\[\#FFD2DF\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 210 223 / var(--tw-bg-opacity));
+}
+
+.bg-fblack {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 51 51 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -1175,12 +1192,28 @@ html {
     width: 100%;
   }
 
+  .lg\:w-2\/3 {
+    width: 66.666667%;
+  }
+
   .lg\:max-w-\[230px\] {
     max-width: 230px;
   }
 
   .lg\:max-w-\[264px\] {
     max-width: 264px;
+  }
+
+  .lg\:max-w-\[596px\] {
+    max-width: 596px;
+  }
+
+  .lg\:max-w-\[590px\] {
+    max-width: 590px;
+  }
+
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:flex-row {
@@ -1219,6 +1252,10 @@ html {
 
   .lg\:gap-y-6 {
     row-gap: 1.5rem;
+  }
+
+  .lg\:gap-y-16 {
+    row-gap: 4rem;
   }
 
   .lg\:p-5 {

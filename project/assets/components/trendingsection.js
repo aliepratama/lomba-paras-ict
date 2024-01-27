@@ -57,7 +57,7 @@ class TrendingSection extends HTMLElement {
                     <div 
                         class="swiper-slide w-fit flex-col px-9 py-7 group cursor-pointer container-rg container-shadow rounded-[40px] items-center gap-y-4 after:content-[attr(number)] badge-rating"
                         number="#${val.id}">
-                        <div>
+                        <div class="w-full flex justify-center">
                             <img 
                             class="max-w-[175px] lg:max-w-[230px]"
                             src="${val.image}" 
