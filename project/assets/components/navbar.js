@@ -29,7 +29,7 @@ class NavBar extends HTMLElement {
     _render(){
         this.innerHTML = `
             ${this.__isSidebar ? '<side-bar></side-bar>' : ''}
-            <div class="fixed top-0 z-10 w-full flex items-center justify-between px-3 lg:px-12 py-4 container-rg">
+            <div class="fixed top-0 z-30 w-full flex items-center justify-between px-3 lg:px-12 py-4 container-rg">
                 <ul class="flex items-center gap-x-5 lg:gap-x-12">
                     <i id="sidebar" class="hidden-lg fa fa-bars button-span-rg"></i>
                     <img
