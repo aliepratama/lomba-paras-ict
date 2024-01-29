@@ -1,45 +1,11 @@
+import DataSource from "../data/datasource.js";
+
 class TrendingSection extends HTMLElement {
-    constructor(){
-        super();
-        this.__lists = [
-            {
-                id: 1,
-                image: './assets/public/book1.png',
-                title: 'Filosofi Teras: Filsafat Yunani',
-                author: 'Henry Manampiring',
-                category: 'Filsafat',
-                rating: '4.9',
-            },
-            {
-                id: 2,
-                image: './assets/public/book2.png',
-                title: 'Bintang',
-                author: 'Tere Liye',
-                category: 'Fiksi',
-                rating: '4.8',
-            },
-            {
-                id: 3,
-                image: './assets/public/book3.png',
-                title: 'Metode Penelitian: Kuantitatif, Kualitatif, dan Penelitian Gabungan (Edisi Pertama)',
-                author: 'Prof. Dr. A. Muri Yusuf, M.Pd.',
-                category: 'Sains',
-                rating: '4.7',
-            },
-            {
-                id: 4,
-                image: './assets/public/book4.png',
-                title: 'Metodologi Penelitian Hukum Islam (Edisi Revisi)',
-                author: 'Dr. Faisal Ananda Arfa, M.A. dan Dr. Watni Marpaung, M.A.',
-                category: 'Agama',
-                rating: '4.7',
-            },
-        ];
-    }
     connectedCallback() {
         this._render();
     }
-    _render(){
+    async _render(){
+        this.__lists = await DataSource.getTrend(4);
         this.innerHTML = `
         <div class="w-full flex flex-col gap-y-20 lg:gap-y-24 px-3 lg:px-24 py-8 lg:py-16">
             <div class="w-full flex justify-between">
@@ -56,7 +22,7 @@ class TrendingSection extends HTMLElement {
                     return `
                     <div 
                         class="swiper-slide w-fit flex-col px-9 py-7 group cursor-pointer container-rg container-shadow rounded-[40px] items-center gap-y-4 after:content-[attr(number)] badge-rating"
-                        number="#${val.id}">
+                        number="#${val.trend}">
                         <div class="w-full flex justify-center">
                             <div class="books w-[175px] h-[263px] lg:w-[230px] lg:h-[345px] bg-center bg-no-repeat bg-cover">
                             </div>
@@ -94,6 +60,26 @@ class TrendingSection extends HTMLElement {
         </div>
         `;
         this.querySelectorAll('.books').forEach((val, key) => val.style.backgroundImage = `url('${this.__lists[key].image}')`);
+        new Swiper('.swiper', {
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 25
+                },
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 80
+                }
+            }
+        });
     }
 }
 customElements.define('trending-section', TrendingSection);
