@@ -807,32 +807,16 @@ html {
   position: fixed;
 }
 
-.top-0 {
-  top: 0px;
-}
-
-.bottom-0 {
-  bottom: 0px;
-}
-
-.right-0 {
-  right: 0px;
-}
-
-.bottom-2 {
-  bottom: 0.5rem;
-}
-
-.right-2 {
-  right: 0.5rem;
-}
-
 .bottom-8 {
   bottom: 2rem;
 }
 
 .right-8 {
   right: 2rem;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .z-10 {
@@ -876,6 +860,14 @@ html {
   height: 100vh;
 }
 
+.h-\[345px\] {
+  height: 345px;
+}
+
+.h-\[263px\] {
+  height: 263px;
+}
+
 .max-h-10 {
   max-height: 2.5rem;
 }
@@ -896,12 +888,20 @@ html {
   max-height: 20rem;
 }
 
+.\!w-\[175px\] {
+  width: 175px !important;
+}
+
 .w-2\/3 {
   width: 66.666667%;
 }
 
 .w-\[140px\] {
   width: 140px;
+}
+
+.w-\[230px\] {
+  width: 230px;
 }
 
 .w-auto {
@@ -917,16 +917,16 @@ html {
   width: 100%;
 }
 
+.w-\[175px\] {
+  width: 175px;
+}
+
 .max-w-20 {
   max-width: 5rem;
 }
 
 .max-w-28 {
   max-width: 7rem;
-}
-
-.max-w-\[175px\] {
-  max-width: 175px;
 }
 
 .max-w-\[200px\] {
@@ -1050,12 +1050,12 @@ html {
   border-radius: 40px;
 }
 
-.rounded-xl {
-  border-radius: 0.75rem;
-}
-
 .rounded-full {
   border-radius: 9999px;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .bg-\[\#FFD2DF\] {
@@ -1073,16 +1073,24 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.p-6 {
-  padding: 1.5rem;
+.bg-cover {
+  background-size: cover;
 }
 
-.p-10 {
-  padding: 2.5rem;
+.bg-center {
+  background-position: center;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
 }
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .px-3 {
@@ -1143,9 +1151,9 @@ html {
   line-height: 2rem;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-lg {
@@ -1156,16 +1164,6 @@ html {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .font-bold {
@@ -1252,6 +1250,14 @@ html {
     display: flex;
   }
 
+  .lg\:\!h-\[345px\] {
+    height: 345px !important;
+  }
+
+  .lg\:h-\[345px\] {
+    height: 345px;
+  }
+
   .lg\:max-h-20 {
     max-height: 5rem;
   }
@@ -1268,8 +1274,12 @@ html {
     width: 100%;
   }
 
-  .lg\:max-w-\[230px\] {
-    max-width: 230px;
+  .lg\:w-\[230px\] {
+    width: 230px;
+  }
+
+  .lg\:min-w-\[230px\] {
+    min-width: 230px;
   }
 
   .lg\:max-w-\[264px\] {
@@ -1329,6 +1339,10 @@ html {
 
   .lg\:gap-y-6 {
     row-gap: 1.5rem;
+  }
+
+  .lg\:gap-y-8 {
+    row-gap: 2rem;
   }
 
   .lg\:p-5 {

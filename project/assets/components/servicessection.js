@@ -3,19 +3,19 @@ class ServicesSection extends HTMLElement {
         super();
         this.__services = [
             {
-                icon: 'assets/public/favicon.png',
+                icon: 'assets/public/l01.png',
                 title: 'Pencarian buku',
                 description: 'Cari buku dengan cepat dan akurat untuk pengalaman membaca yang efisien.',
                 button: 'Cari buku',
             },
             {
-                icon: 'assets/public/favicon.png',
+                icon: 'assets/public/l02.png',
                 title: 'On Trending',
                 description: 'Temukan buku-buku populer terbaru dan terkini di perpustakaan digital kami.',
                 button: 'Lihat Trending',
             },
             {
-                icon: 'assets/public/favicon.png',
+                icon: 'assets/public/l03.png',
                 title: 'Baca Online',
                 description: 'Nikmati akses instan ke buku favorit tanpa perlu mengunduh, kapan pun, di mana pun.',
                 button: 'Baca online',

@@ -4,7 +4,11 @@ class CategoriesSection extends HTMLElement {
         this.__categories = ['Umum', 'Filsafat', 'Psikologi',
                             'Agama', 'Sosial', 'Bahasa',
                             'Sains', 'Teknologi'];
-        this.__icons = Array(8).fill('assets/public/favicon.png');
+        this.__icons = ['assets/public/k09.png','assets/public/k05.png',
+                        'assets/public/k06.png','assets/public/k04.png',
+                        'assets/public/k07.png','assets/public/k03.png',
+                        'assets/public/k08.png','assets/public/k02.png',
+                        ];
     }
     connectedCallback() {
         this._render();

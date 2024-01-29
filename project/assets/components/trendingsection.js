@@ -12,27 +12,27 @@ class TrendingSection extends HTMLElement {
             },
             {
                 id: 2,
-                image: './assets/public/book1.png',
-                title: 'Filosofi Teras: Filsafat Yunani',
-                author: 'Henry Manampiring',
-                category: 'Filsafat',
-                rating: '4.9',
+                image: './assets/public/book2.png',
+                title: 'Bintang',
+                author: 'Tere Liye',
+                category: 'Fiksi',
+                rating: '4.8',
             },
             {
                 id: 3,
-                image: './assets/public/book1.png',
-                title: 'Filosofi Teras: Filsafat Yunani',
-                author: 'Henry Manampiring',
-                category: 'Filsafat',
-                rating: '4.9',
+                image: './assets/public/book3.png',
+                title: 'Metode Penelitian: Kuantitatif, Kualitatif, dan Penelitian Gabungan (Edisi Pertama)',
+                author: 'Prof. Dr. A. Muri Yusuf, M.Pd.',
+                category: 'Sains',
+                rating: '4.7',
             },
             {
                 id: 4,
-                image: './assets/public/book1.png',
-                title: 'Filosofi Teras: Filsafat Yunani',
-                author: 'Henry Manampiring',
-                category: 'Filsafat',
-                rating: '4.9',
+                image: './assets/public/book4.png',
+                title: 'Metodologi Penelitian Hukum Islam (Edisi Revisi)',
+                author: 'Dr. Faisal Ananda Arfa, M.A. dan Dr. Watni Marpaung, M.A.',
+                category: 'Agama',
+                rating: '4.7',
             },
         ];
     }
@@ -58,10 +58,8 @@ class TrendingSection extends HTMLElement {
                         class="swiper-slide w-fit flex-col px-9 py-7 group cursor-pointer container-rg container-shadow rounded-[40px] items-center gap-y-4 after:content-[attr(number)] badge-rating"
                         number="#${val.id}">
                         <div class="w-full flex justify-center">
-                            <img 
-                            class="max-w-[175px] lg:max-w-[230px]"
-                            src="${val.image}" 
-                            alt="Buku"/>
+                            <div class="books w-[175px] h-[263px] lg:w-[230px] lg:h-[345px] bg-center bg-no-repeat bg-cover">
+                            </div>
                         </div>
                         <div class="flex flex-col gap-y-4">
                             <div class="flex flex-col gap-y-2">
@@ -95,6 +93,7 @@ class TrendingSection extends HTMLElement {
             </div>
         </div>
         `;
+        this.querySelectorAll('.books').forEach((val, key) => val.style.backgroundImage = `url('${this.__lists[key].image}')`);
     }
 }
 customElements.define('trending-section', TrendingSection);
