@@ -27,28 +27,28 @@ class App extends HTMLElement {
         this.querySelectorAll('.route').forEach(val => val.addEventListener('click', () => {
             this.setStateNavbar(val.getAttribute('key'));
         }));
+        new Swiper('.swiper', {
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 25
+                },
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 80
+                }
+            }
+        });  
     }
 }
 document.addEventListener('DOMContentLoaded', () => {
     customElements.define('app-root', App);
-    new Swiper('.swiper', {
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 25
-            },
-            640: {
-                slidesPerView: 3,
-                spaceBetween: 80
-            }
-        }
-    });  
 });
