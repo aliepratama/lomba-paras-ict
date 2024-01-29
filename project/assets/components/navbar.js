@@ -4,6 +4,20 @@ class NavBar extends HTMLElement {
     constructor(){
         super();
         this.__isSidebar = false;
+        this.__tabs = [
+            {
+                key: 'beranda',
+                title: 'Beranda',
+            },
+            {
+                key: 'direktori',
+                title: 'Direktori',
+            },
+            {
+                key: 'trending',
+                title: 'Trending',
+            },
+        ];
     }
     toogleSidebar(){
         this.__isSidebar = !this.__isSidebar;
@@ -26,9 +40,15 @@ class NavBar extends HTMLElement {
                         class="max-h-12 hidden-m" 
                         src="assets/public/logo.png" 
                         alt="Logo eLibrary"/>
-                    <li class="hidden-m button-span-rg-active">Beranda</li>
-                    <li class="hidden-m button-span-rg">Direktori</l>
-                    <li class="hidden-m button-span-rg">Informasi</li>
+                    ${
+                        String(this.__tabs.map((val) => {
+                            return `
+                                <li key="${val.key}" 
+                                class="route hidden-m ${this.attributes.active.value == val.key ? 'button-span-rg-active' : 'button-span-rg'}"
+                                >${val.title}</li>
+                            `;
+                        })).replace(/,/g, '')
+                    }
                 </ul>
                 <div class="flex items-center gap-x-8">
                     <button 
