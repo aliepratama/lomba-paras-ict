@@ -1,4 +1,10 @@
+import categories from "../data/categories.js";
+
 class SideBar extends HTMLElement {
+    constructor(){
+        super();
+        this.routerCallback = null;
+    }
     connectedCallback() {
         this._render();
     }
@@ -15,9 +21,15 @@ class SideBar extends HTMLElement {
                         class="fa fa-times button-span-rg"></i>
                     </div>
                     <ul class="w-full flex flex-col gap-y-7 py-7">
-                        <li class="button-span-rg font-bold">Beranda</li>
-                        <li class="button-span-rg font-bold">Direktori</li>
-                        <li class="button-span-rg font-bold">Informasi</li>
+                    ${
+                        String(categories.map((val) => {
+                            return `
+                                <li key="${val.key}" 
+                                class="route-sidebar font-bold ${this.attributes.active.value == val.key ? 'button-span-rg-active' : 'button-span-rg'}">
+                                ${val.title}</li>
+                            `;
+                        })).replace(/,/g, '')
+                    }
                         <li class="button-span-rg font-bold">Masuk dengan akun</li>
                         <li class="button-span-rg font-bold">Daftar akun</li>
                     </ul>
@@ -30,6 +42,11 @@ class SideBar extends HTMLElement {
                 </div>
             </div>
         `;
+        // this.querySelectorAll('.route-sidebar').forEach(val => val.addEventListener('click', () => {
+        //     console.log(val)
+        //     console.log(val.routerCallback)
+        //     val.routerCallback(val.getAttribute('key'));
+        // }));
     }
 }
 customElements.define('side-bar', SideBar);

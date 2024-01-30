@@ -1,4 +1,6 @@
-import '../views/home.js';
+import './home.js';
+import './searchpage.js';
+import './viewbooks.js';
 
 class Router extends HTMLElement {
     constructor(){
@@ -7,6 +9,14 @@ class Router extends HTMLElement {
             {
                 route: 'beranda',
                 component: 'home-page',
+            },
+            {
+                route: 'direktori',
+                component: 'search-page',
+            },
+            {
+                route: 'trending',
+                component: 'viewbooks-page',
             },
         ];
     }

@@ -1,23 +1,11 @@
 import './sidebar.js';
+import categories from '../data/categories.js';
 
 class NavBar extends HTMLElement {
     constructor(){
         super();
         this.__isSidebar = false;
-        this.__tabs = [
-            {
-                key: 'beranda',
-                title: 'Beranda',
-            },
-            {
-                key: 'direktori',
-                title: 'Direktori',
-            },
-            {
-                key: 'trending',
-                title: 'Trending',
-            },
-        ];
+        this.__tabs = categories;
     }
     toogleSidebar(){
         this.__isSidebar = !this.__isSidebar;
@@ -28,7 +16,7 @@ class NavBar extends HTMLElement {
     }
     _render(){
         this.innerHTML = `
-            ${this.__isSidebar ? '<side-bar></side-bar>' : ''}
+            <side-bar active="${this.attributes.active.value}" class="${this.__isSidebar ? 'block' : 'hidden'}"></side-bar>
             <div class="fixed top-0 z-30 w-full flex items-center justify-between px-3 lg:px-12 py-4 container-rg">
                 <ul class="flex items-center gap-x-5 lg:gap-x-12">
                     <i id="sidebar" class="hidden-lg fa fa-bars button-span-rg"></i>
