@@ -58,4 +58,10 @@
   .slider-button {
     @apply w-fit h-fit text-primary container-rg container-shadow py-4 px-6 rounded-full z-10;
   }
+  .bar-button {
+    @apply w-fit px-5 py-2 rounded-2xl hover:bg-[#F2F2F2] cursor-pointer;
+  }
+  .sort-button {
+    @apply text-fblack hover:text-primary cursor-pointer;
+  }
 }

@@ -1,4 +1,4 @@
-import categories from "../data/categories.js";
+import menu from "../data/menu.js";
 
 class SideBar extends HTMLElement {
     constructor(){
@@ -22,7 +22,7 @@ class SideBar extends HTMLElement {
                     </div>
                     <ul class="w-full flex flex-col gap-y-7 py-7">
                     ${
-                        String(categories.map((val) => {
+                        String(menu.map((val) => {
                             return `
                                 <li key="${val.key}" 
                                 class="route-sidebar font-bold ${this.attributes.active.value == val.key ? 'button-span-rg-active' : 'button-span-rg'}">

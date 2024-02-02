@@ -1,11 +1,11 @@
 import './sidebar.js';
-import categories from '../data/categories.js';
+import menu from '../data/menu.js';
 
 class NavBar extends HTMLElement {
     constructor(){
         super();
         this.__isSidebar = false;
-        this.__tabs = categories;
+        this.__tabs = menu;
     }
     toogleSidebar(){
         this.__isSidebar = !this.__isSidebar;

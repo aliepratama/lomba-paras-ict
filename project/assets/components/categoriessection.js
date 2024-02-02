@@ -1,15 +1,6 @@
+import categories from "../data/categories.js";
+
 class CategoriesSection extends HTMLElement {
-    constructor(){
-        super();
-        this.__categories = ['Umum', 'Filsafat', 'Psikologi',
-                            'Agama', 'Sosial', 'Bahasa',
-                            'Sains', 'Teknologi'];
-        this.__icons = ['assets/public/k09.png','assets/public/k05.png',
-                        'assets/public/k06.png','assets/public/k04.png',
-                        'assets/public/k07.png','assets/public/k03.png',
-                        'assets/public/k08.png','assets/public/k02.png',
-                        ];
-    }
     connectedCallback() {
         this._render();
     }
@@ -22,14 +13,14 @@ class CategoriesSection extends HTMLElement {
             </div>
             <div class="w-full grid grid-cols-2 place-content-between place-items-center lg:flex lg:justify-between">
                 ${
-                String(this.__categories.map((val, index) => {
+                String(categories.map((val) => {
                     return `
                     <div class="w-[140px] py-4 flex flex-col items-center gap-y-6 cursor-pointer hover:scale-105">
                         <img 
                         class="max-w-20"
-                        src="${this.__icons[index]}"
+                        src="${val.icon}"
                         alt="Kategori buku"/>
-                        <span class="text-fblack">${val}</span>
+                        <span class="text-fblack">${val.name}</span>
                     </div>
                     `
                 })).replace(/,/g, '')
