@@ -1020,6 +1020,10 @@ html {
   justify-content: space-between;
 }
 
+.justify-items-center {
+  justify-items: center;
+}
+
 .gap-x-2 {
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
@@ -1047,6 +1051,10 @@ html {
 
 .gap-y-12 {
   row-gap: 3rem;
+}
+
+.gap-y-14 {
+  row-gap: 3.5rem;
 }
 
 .gap-y-16 {
@@ -1142,11 +1150,6 @@ html {
   padding: 1.5rem;
 }
 
-.px-24 {
-  padding-left: 6rem;
-  padding-right: 6rem;
-}
-
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1155,6 +1158,11 @@ html {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .px-9 {
@@ -1318,6 +1326,10 @@ html {
     display: flex;
   }
 
+  .lg\:hidden {
+    display: none;
+  }
+
   .lg\:h-\[345px\] {
     height: 345px;
   }
@@ -1358,6 +1370,10 @@ html {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -1391,6 +1407,10 @@ html {
 
   .lg\:gap-y-12 {
     row-gap: 3rem;
+  }
+
+  .lg\:gap-y-14 {
+    row-gap: 3.5rem;
   }
 
   .lg\:gap-y-16 {
@@ -1437,6 +1457,11 @@ html {
   .lg\:py-5 {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+  }
+
+  .lg\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 
   .lg\:text-2xl {

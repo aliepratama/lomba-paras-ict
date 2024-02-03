@@ -1,3 +1,4 @@
+import clsx from "../js/clsx.js";
 import categories from "../data/categories.js";
 
 class CategoriesBar extends HTMLElement {
@@ -7,36 +8,28 @@ class CategoriesBar extends HTMLElement {
             'Semua buku',
             ...categories.map((val) => val.name).slice(0, 5)
         ];
-        this.stateActive = 'Semua buku';
-    }
-    setStateActive(key){
-        this.stateActive = key;
-        this._render();
     }
     connectedCallback() {
         this._render();
     }
     _render(){
         this.innerHTML = `
-        <div class="flex w-full items-center">
+        <div class="flex w-full gap-x-2 justify-between items-center">
             ${
                 String(this.__categories.map((val) => {
                     return `
-                        <div class="bar-button ${this.stateActive === val ? 'bg-[#F2F2F2]' : ''}">
+                        <div class="bar-button ${clsx(this.attributes.stateActive.value === val ? 'bg-[#F2F2F2]' : '',
+                                                val !== 'Semua buku' ? 'hidden-m' : '')}">
                             <span>${val}</span>
                         </div>
                     `;
                 })).replace(/,/g, '')
             }
-            <div>
-                <span class="bar-button text-primary">Lainnya</span>
+            <div class="bar-button text-primary">
+                <span>Lainnya</span>
             </div>
         </div>
         `;
-        this.querySelectorAll('.bar-button').forEach((val, index) => 
-            val.addEventListener('click', () => {
-                this.setStateActive(this.__categories[index]);
-        }));
     }
 }
 customElements.define('categories-bar', CategoriesBar);

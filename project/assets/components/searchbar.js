@@ -8,8 +8,8 @@ class SearchBar extends HTMLElement {
                 <div class="w-full flex items-center justify-center input-text-rg px-4 py-3 lg:py-5 lg:px-6 gap-x-4">
                     <input 
                         id="search-input" 
-                        class="w-full regular-text text-left text-lblack prevent-input-text" 
-                        type="text" 
+                        class="w-full regular-text text-left text-lblack prevent-input-text"
+                        type="text"
                         placeholder="Contoh: Laskar Pelangi"
                         aria-label="Masukkan kata kunci buku"
                         title="Input Kata Kunci"/>
