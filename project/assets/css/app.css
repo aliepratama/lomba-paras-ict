@@ -899,6 +899,10 @@ html {
   display: none;
 }
 
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
 .h-40 {
   height: 10rem;
 }
@@ -1105,6 +1109,15 @@ html {
   border-radius: 0.75rem;
 }
 
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
+.border-b-slate-200 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(226 232 240 / var(--tw-border-opacity));
+}
+
 .bg-\[\#F2F2F2\] {
   --tw-bg-opacity: 1;
   background-color: rgb(242 242 242 / var(--tw-bg-opacity));
@@ -1170,9 +1183,9 @@ html {
   padding-right: 2.25rem;
 }
 
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .py-12 {
@@ -1203,6 +1216,11 @@ html {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.\!py-0 {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
 }
 
 .text-left {
@@ -1313,6 +1331,10 @@ html {
   background-color: rgb(242 242 242 / var(--tw-bg-opacity));
 }
 
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
 .group:hover .group-hover\:underline {
   text-decoration-line: underline;
 }
@@ -1360,14 +1382,6 @@ html {
 
   .lg\:max-w-\[264px\] {
     max-width: 264px;
-  }
-
-  .lg\:max-w-\[596px\] {
-    max-width: 596px;
-  }
-
-  .lg\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-3 {
@@ -1449,6 +1463,11 @@ html {
     padding-right: 1.5rem;
   }
 
+  .lg\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
   .lg\:py-16 {
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -1457,11 +1476,6 @@ html {
   .lg\:py-5 {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
-  }
-
-  .lg\:py-10 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
   }
 
   .lg\:text-2xl {

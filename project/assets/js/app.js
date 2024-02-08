@@ -6,7 +6,7 @@ import '../views/router.js';
 class App extends HTMLElement {
     constructor(){
         super();
-        this.__activeTab = 'trending';
+        this.__activeTab = 'beranda';
     }
     setStateNavbar(key){
         this.__activeTab = key;
