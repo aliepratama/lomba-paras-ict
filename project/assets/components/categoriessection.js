@@ -1,5 +1,5 @@
 import categories from "../data/categories.js";
-import { FadeInUp } from "../js/animation.js";
+import { FadeIn } from "../js/animation.js";
 
 class CategoriesSection extends HTMLElement {
     connectedCallback() {
@@ -29,7 +29,7 @@ class CategoriesSection extends HTMLElement {
             </div>
         </div>
         `;
-        new FadeInUp('.animate-5').observe();
+        new FadeIn('.animate-5').observe();
     }
 }
 customElements.define('categories-section', CategoriesSection);

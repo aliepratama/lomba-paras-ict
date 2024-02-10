@@ -1,3 +1,5 @@
+import { FadeInDown } from "../js/animation.js";
+
 class Accordion extends HTMLElement {
     constructor(){
         super();
@@ -35,18 +37,19 @@ class Accordion extends HTMLElement {
                 <div class="w-full flex justify-between items-center">
                     <span class="button-accordion text-xl lg:text-3xl font-serif text-fblack cursor-pointer hover:underline">${this.__qna[indexProps].question}</span>
                     <div class="w-fit">
-                        <button class="button-accordion button-fill-rg aspect-square">
+                        <button class="button-accordion button-fill-rg aspect-square transition-all">
                             <i class="fa ${this.__stateOpen ? 'fa-minus' : 'fa-plus'}"></i>
                         </button>
                     </div>
                 </div>
                 <div class="${this.__stateOpen ? '' : 'hidden'}">
-                    <p class="text-lg lg:text-xl text-fblack">${this.__qna[indexProps].answer}</p>
+                    <p class="accordion-text text-lg lg:text-xl text-fblack">${this.__qna[indexProps].answer}</p>
                 </div>
             </div>
         `;
         this.querySelectorAll('.button-accordion').forEach(val => val.addEventListener('click', () => {
             this.toogleStateOpen();
+            new FadeInDown(this.querySelector('.accordion-text')).animate();
         }));
     }
 }

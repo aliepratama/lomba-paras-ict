@@ -10,7 +10,6 @@ class AnimationMaker {
         } else {
             this.target = document.querySelector(target);
         }
-        console.log(this.target);
     }
     animate() {
         this.target.animate(this.keyframe, this.config);
@@ -69,6 +68,18 @@ export class FadeInUp extends AnimationMaker {
         this.keyframe = [
             {opacity: '0', duration: delay}, 
             {opacity: '0', transform: 'translate3d(0, 50%, 0)', offset: 0}, 
+            {opacity: '1', transform: 'none', offset: 1}
+        ];
+        this.config.duration += delay;
+    }
+};
+
+export class FadeInDown extends AnimationMaker {
+    constructor(target, delay = 0) {
+        super(target);
+        this.keyframe = [
+            {opacity: '0', duration: delay}, 
+            {opacity: '0', transform: 'translate3d(0, -50%, 0)', offset: 0}, 
             {opacity: '1', transform: 'none', offset: 1}
         ];
         this.config.duration += delay;
