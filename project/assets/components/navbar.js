@@ -40,6 +40,7 @@ class NavBar extends HTMLElement {
                 </ul>
                 <div class="flex items-center gap-x-8">
                     <button 
+                        id="login"
                         class="button-fill-rg">
                         Masuk
                     </button>
@@ -54,6 +55,18 @@ class NavBar extends HTMLElement {
         try{
             this.querySelector('#closeSidebar').addEventListener('click', () => this.toogleSidebar());
         } catch{}
+        this.querySelector('#login').addEventListener('click', () => {
+            const heroKeyframes = [
+                { opacity: 0 },
+                { opacity: 1 },
+            ];
+            
+            const heroTiming = {
+                duration: 3000,
+            }
+            
+            document.querySelector('hero-section').animate(heroKeyframes, heroTiming);
+        });
     }
 }
 customElements.define('nav-bar', NavBar);
