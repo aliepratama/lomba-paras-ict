@@ -1,4 +1,5 @@
 import categories from "../data/categories.js";
+import { FadeInUp } from "../js/animation.js";
 
 class CategoriesSection extends HTMLElement {
     connectedCallback() {
@@ -6,7 +7,7 @@ class CategoriesSection extends HTMLElement {
     }
     _render(){
         this.innerHTML = `
-        <div class="w-full flex flex-col gap-y-8 px-3 lg:px-24 py-8 lg:py-16">
+        <div class="animate-5 w-full flex flex-col gap-y-8 px-3 lg:px-24 py-8 lg:py-16">
             <div class="w-full flex justify-between">
                 <h4 class="text-2xl lg:text-3xl font-serif text-fblack">Kategori Buku</h4>
                 <button class="text-xl lg:text-2xl text-primary">Lihat Semua</button>
@@ -28,6 +29,7 @@ class CategoriesSection extends HTMLElement {
             </div>
         </div>
         `;
+        new FadeInUp('.animate-5').observe();
     }
 }
 customElements.define('categories-section', CategoriesSection);
