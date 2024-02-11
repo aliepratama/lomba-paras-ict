@@ -20,7 +20,7 @@ class ViewBooksPage extends HTMLElement {
         this._render();
     }
     _render(){
-        this.__lists = DataSource.getTrend(4);
+        this.__lists = DataSource.getTrend(10);
         this.innerHTML = `
         <div class="w-full flex flex-col gap-y-8 lg:gap-y-14 py-8 lg:py-10">
             <div class="w-full flex justify-between items-center px-5 lg:px-24">

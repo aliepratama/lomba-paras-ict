@@ -6,8 +6,10 @@ class AnimationMaker {
         easing: 'ease-in-out',
     }
     constructor(observer, target = observer){
-        this.target = typeof(target) === 'object' ? target : document.querySelector(target);
-        this.observer = typeof(observer) === 'object' ? observer : document.querySelector(observer);
+        this.target = typeof(target) === 'object' ? 
+                        target : document.querySelector(target);
+        this.observer = typeof(observer) === 'object' ? 
+                        observer : document.querySelector(observer);
     }
     setDuration(duration) {
         this.config.duration = duration + this.delay;
