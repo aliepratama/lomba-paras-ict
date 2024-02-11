@@ -4,13 +4,13 @@ class TrendingSection extends HTMLElement {
     connectedCallback() {
         this._render();
     }
-    async _render(){
-        this.__lists = await DataSource.getTrend(4);
+    _render(){
+        this.__lists = DataSource.getTrend(4);
         this.innerHTML = `
         <div class="w-full flex flex-col gap-y-20 lg:gap-y-24 px-3 lg:px-24 py-8 lg:py-16">
             <div class="w-full flex justify-between">
                 <h4 class="text-2xl lg:text-3xl font-serif text-fblack">On Trending</h4>
-                <button class="text-xl lg:text-2xl text-primary">Lihat Semua</button>
+                <button key="trending" class="route text-xl lg:text-2xl text-primary">Lihat Semua</button>
             </div>
             <div class="swiper w-full flex justify-between items-center">
                 <button class="slider-button swiper-button-prev">

@@ -30,6 +30,7 @@ class Router extends HTMLElement {
         } else {
             this.innerHTML = '';
         }
+        window.scrollTo(0,0);
     }
 }
 customElements.define('page-router', Router);

@@ -9,18 +9,21 @@ class ServicesSection extends HTMLElement {
                 title: 'Pencarian buku',
                 description: 'Cari buku dengan cepat dan akurat untuk pengalaman membaca yang efisien.',
                 button: 'Cari buku',
+                route: 'direktori',
             },
             {
                 icon: 'assets/public/l02.png',
                 title: 'On Trending',
                 description: 'Temukan buku-buku populer terbaru dan terkini di perpustakaan digital kami.',
                 button: 'Lihat Trending',
+                route: 'trending',
             },
             {
                 icon: 'assets/public/l03.png',
                 title: 'Baca Online',
                 description: 'Nikmati akses instan ke buku favorit tanpa perlu mengunduh, kapan pun, di mana pun.',
                 button: 'Baca online',
+                route: 'trending',
             },
         ];
     }
@@ -45,7 +48,7 @@ class ServicesSection extends HTMLElement {
                         <div class="w-full flex flex-col gap-y-4">
                             <h4 class="max-w-[308px] text-2xl lg:text-3xl font-serif text-fblack">${val.title}</h4>
                             <p class="max-w-[308px] text-lg lg:text-xl text-fblack">${val.description}</p>
-                            <button class="button-fill-rg">${val.button}</button>
+                            <button key="${val.route}" class="route button-fill-rg">${val.button}</button>
                         </div>
                     </div>
                     `;
