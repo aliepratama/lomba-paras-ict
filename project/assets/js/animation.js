@@ -4,11 +4,16 @@ class AnimationMaker {
         duration: 1000,
         easing: 'ease-in-out',
     }
-    constructor(target){
+    constructor(observer, target = observer){
         if(typeof(target) === 'object'){
             this.target = target;
         } else {
             this.target = document.querySelector(target);
+        }
+        if(typeof(observer) === 'object'){
+            this.observer = observer;
+        } else {
+            this.observer = document.querySelector(observer);
         }
     }
     animate() {
@@ -21,13 +26,13 @@ class AnimationMaker {
             }  
         });
         this.animate();
-        observer.observe(this.target);
+        observer.observe(this.observer);
     }
 }
 
 export class FadeIn extends AnimationMaker {
-    constructor(target, delay = 0) {
-        super(target);
+    constructor(observer, target = observer, delay = 0) {
+        super(observer, target);
         this.keyframe = [
             { opacity: 0, duration: delay },
             { opacity: 0 },
@@ -39,8 +44,8 @@ export class FadeIn extends AnimationMaker {
 };
 
 export class FadeInLeft extends AnimationMaker {
-    constructor(target, delay = 0) {
-        super(target);
+    constructor(observer, target = observer, delay = 0) {
+        super(observer, target);
         this.keyframe = [
             {opacity: '0', duration: delay}, 
             {opacity: '0', transform: 'translate3d(-100%, 0, 0)', offset: 0}, 
@@ -51,8 +56,8 @@ export class FadeInLeft extends AnimationMaker {
 };
 
 export class FadeInRight extends AnimationMaker {
-    constructor(target, delay = 0) {
-        super(target);
+    constructor(observer, target = observer, delay = 0) {
+        super(observer, target);
         this.keyframe = [
             {opacity: '0', duration: delay}, 
             {opacity: '0', transform: 'translate3d(100%, 0, 0)', offset: 0}, 
@@ -63,8 +68,8 @@ export class FadeInRight extends AnimationMaker {
 };
 
 export class FadeInUp extends AnimationMaker {
-    constructor(target, delay = 0) {
-        super(target);
+    constructor(observer, target = observer, delay = 0) {
+        super(observer, target);
         this.keyframe = [
             {opacity: '0', duration: delay}, 
             {opacity: '0', transform: 'translate3d(0, 50%, 0)', offset: 0}, 
@@ -75,8 +80,8 @@ export class FadeInUp extends AnimationMaker {
 };
 
 export class FadeInDown extends AnimationMaker {
-    constructor(target, delay = 0) {
-        super(target);
+    constructor(observer, target, delay = 0) {
+        super(observer, target);
         this.keyframe = [
             {opacity: '0', duration: delay}, 
             {opacity: '0', transform: 'translate3d(0, -50%, 0)', offset: 0}, 

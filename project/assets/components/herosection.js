@@ -28,10 +28,10 @@ class HeroSection extends HTMLElement {
                 </div>
             </div>
         `;
-        new FadeInLeft('.animate-1').observe();
-        new FadeInLeft('.animate-2', 250).observe();
-        new FadeInLeft('search-bar', 500).observe();
-        new FadeInRight('.animate-4', 250).observe();
+        new FadeInLeft(this, '.animate-1').observe();
+        new FadeInLeft(this, '.animate-2', 250).observe();
+        new FadeInLeft(this, 'search-bar', 500).observe();
+        new FadeInRight(this, '.animate-4', 250).observe();
     }
 }
 customElements.define('hero-section', HeroSection);

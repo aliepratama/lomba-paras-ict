@@ -54,9 +54,9 @@ class ServicesSection extends HTMLElement {
             </div>
         </div>
         `;
-        new FadeInDown('.animate-6').observe();
+        new FadeInDown(this, '.animate-6').observe();
         document.querySelectorAll('.service-card').forEach((val, index) => {
-            new FadeInRight(val, 250 * index).observe();
+            new FadeInRight(this, val, 250 * index).observe();
         });
     }
 }

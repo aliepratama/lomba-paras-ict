@@ -33,7 +33,7 @@ class Accordion extends HTMLElement {
     _render(){
         const indexProps = this.attributes.index.value;
         this.innerHTML = `
-            <div class="w-full flex flex-col gap-y-8 border-b-2 border-b-slate-200 py-8">
+            <div class="w-full flex flex-col gap-y-8 border-b-2 border-b-slate-200 py-8 transition-all">
                 <div class="w-full flex justify-between items-center">
                     <span class="button-accordion text-xl lg:text-3xl font-serif text-fblack cursor-pointer hover:underline">${this.__qna[indexProps].question}</span>
                     <div class="w-fit">
