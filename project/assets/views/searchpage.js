@@ -18,7 +18,7 @@ class SearchPage extends HTMLElement {
                     Silahkan ketik kata kunci judul buku yang Anda inginkan!
                 </h4>
             </div>
-            <categories-section></categories-section>
+            <categories-section mode="full"></categories-section>
         </div>
         `;
     }

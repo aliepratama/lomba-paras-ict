@@ -49,7 +49,7 @@ class Accordion extends HTMLElement {
         `;
         this.querySelectorAll('.button-accordion').forEach(val => val.addEventListener('click', () => {
             this.toogleStateOpen();
-            new FadeInDown(this.querySelector('.accordion-text')).animate();
+            new FadeInDown(this.querySelector('.accordion-text')).setDuration(500).animate();
         }));
     }
 }

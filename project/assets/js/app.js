@@ -2,6 +2,7 @@ import '../components/navbar.js';
 import '../components/footer.js';
 import '../components/contactbutton.js';
 import '../views/router.js';
+import { FadeIn, FadeOut } from './animation.js';
 
 class App extends HTMLElement {
     constructor(){
@@ -9,8 +10,12 @@ class App extends HTMLElement {
         this.__activeTab = 'beranda';
     }
     setStateNavbar(key){
-        this.__activeTab = key;
-        this._render();
+        new FadeOut(this.querySelector('page-router')).setDuration(250).animate()
+        setTimeout(() => {
+            this.__activeTab = key;
+            this._render();
+            new FadeIn(this.querySelector('page-router')).setDuration(250).animate();
+        }, 250);
     }
     connectedCallback() {
         this._render();
@@ -24,17 +29,9 @@ class App extends HTMLElement {
         <footer-section></footer-section>
         </div>
         `;
-        // console.log(this.querySelectorAll('.route'));
         this.querySelectorAll('.route').forEach(val => val.addEventListener('click', () => {
-            // console.log(val)
             this.setStateNavbar(val.getAttribute('key'));
         }));
-        // TODO: Tolong ini sidebar error!
-        // document.querySelectorAll('.route-sidebar').forEach(val => {
-        //     val.addEventListener('click', () => console.log('booom'))
-        //     val.routerCallback = this.setStateNavbar;
-        //     console.log(val.routerCallback)
-        // });
     }
 }
 document.addEventListener('DOMContentLoaded', () => {
