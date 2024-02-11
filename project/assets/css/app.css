@@ -822,22 +822,6 @@ html {
   color: rgb(222 27 81 / var(--tw-text-opacity));
 }
 
-.contact-button {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.contact-button::after {
-  --tw-content: '';
-  content: var(--tw-content);
-}
-
-.contact-button:hover::after {
-  --tw-content: 'Butuh Bantuan?';
-  content: var(--tw-content);
-}
-
 .visible {
   visibility: visible;
 }
@@ -848,10 +832,6 @@ html {
 
 .fixed {
   position: fixed;
-}
-
-.absolute {
-  position: absolute;
 }
 
 .bottom-8 {
@@ -931,6 +911,10 @@ html {
   height: 100vh;
 }
 
+.h-\[160px\] {
+  height: 160px;
+}
+
 .h-\[263px\] {
   height: 263px;
 }
@@ -980,6 +964,10 @@ html {
   width: 100%;
 }
 
+.w-\[285px\] {
+  width: 285px;
+}
+
 .max-w-20 {
   max-width: 5rem;
 }
@@ -994,11 +982,6 @@ html {
 
 .max-w-\[308px\] {
   max-width: 308px;
-}
-
-.translate-x-8 {
-  --tw-translate-x: 2rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform {
@@ -1132,6 +1115,10 @@ html {
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
 }
 
 .border-b-2 {
@@ -1364,17 +1351,8 @@ html {
   text-decoration-line: underline;
 }
 
-.group:hover .group-hover\:relative {
-  position: relative;
-}
-
 .group:hover .group-hover\:block {
   display: block;
-}
-
-.group:hover .group-hover\:translate-x-0 {
-  --tw-translate-x: 0px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .group:hover .group-hover\:underline {
@@ -1402,6 +1380,10 @@ html {
     height: 345px;
   }
 
+  .lg\:h-\[400px\] {
+    height: 400px;
+  }
+
   .lg\:max-h-20 {
     max-height: 5rem;
   }
@@ -1424,6 +1406,10 @@ html {
 
   .lg\:w-full {
     width: 100%;
+  }
+
+  .lg\:w-\[712px\] {
+    width: 712px;
   }
 
   .lg\:max-w-\[264px\] {

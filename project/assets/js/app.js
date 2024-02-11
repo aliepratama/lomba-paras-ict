@@ -29,7 +29,12 @@ class App extends HTMLElement {
         <footer-section></footer-section>
         </div>
         `;
-        this.querySelectorAll('.route').forEach(val => val.addEventListener('click', () => {
+        document.querySelectorAll('.route').forEach(val => val.addEventListener('click', () => {
+            this.setStateNavbar(val.getAttribute('key'));
+        }));
+        console.log(document.querySelectorAll('.route-sidebar'));
+        document.querySelectorAll('.route-sidebar').forEach(val => val.addEventListener('click', () => {
+            console.log(val);
             this.setStateNavbar(val.getAttribute('key'));
         }));
     }

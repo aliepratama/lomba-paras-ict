@@ -2,6 +2,7 @@ import '../components/herosection.js';
 import '../components/categoriessection.js';
 import '../components/servicessection.js';
 import '../components/trendingsection.js';
+import '../components/authorsection.js';
 import '../components/faqsection.js';
 import '../components/footer.js';
 
@@ -15,6 +16,7 @@ class HomePage extends HTMLElement {
         <categories-section></categories-section>
         <services-section></services-section>
         <trending-section></trending-section>
+        <author-section></author-section>
         <faq-section></faq-section>
         `;
     }

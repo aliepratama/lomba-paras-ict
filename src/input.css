@@ -64,7 +64,4 @@
   .sort-button {
     @apply text-fblack hover:text-primary cursor-pointer;
   }
-  .contact-button {
-    @apply transition-all after:content-[''] hover:after:content-['Butuh_Bantuan?']
-  }
 }
