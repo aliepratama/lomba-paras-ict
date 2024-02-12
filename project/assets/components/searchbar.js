@@ -10,7 +10,7 @@ class SearchBar extends HTMLElement {
                         id="search-input" 
                         class="w-full regular-text text-left text-lblack prevent-input-text"
                         type="text"
-                        placeholder="Contoh: Laskar Pelangi"
+                        placeholder="Contoh: Filosofi Teras"
                         aria-label="Masukkan kata kunci buku"
                         title="Input Kata Kunci"/>
                     <label for="search-input" aria-labelledby="search-input">
