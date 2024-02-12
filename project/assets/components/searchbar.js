@@ -45,6 +45,11 @@ class SearchBar extends HTMLElement {
         }
         searchInput.value = this.attributes.key ? this.attributes.key.value : null;
         searchInput.addEventListener('input', activeBox);
+        searchInput.addEventListener('keydown', (event) => {
+            if(event.isTrusted && event.keyCode === 13){
+                document.querySelector('#submitSearch').click();
+            }
+        });
     }
 }
 customElements.define('search-bar', SearchBar);
