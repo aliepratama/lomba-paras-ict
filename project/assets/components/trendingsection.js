@@ -5,7 +5,7 @@ class TrendingSection extends HTMLElement {
         this._render();
     }
     _render(){
-        this.__lists = DataSource.getTrend(4);
+        this.__lists = DataSource.getTrend(5);
         this.innerHTML = `
         <div class="w-full flex flex-col gap-y-20 lg:gap-y-24 px-3 lg:px-24 py-8 lg:py-16">
             <div class="w-full flex justify-between">

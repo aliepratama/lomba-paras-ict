@@ -6,10 +6,15 @@ class ViewBooksPage extends HTMLElement {
     constructor(){
         super();
         this.stateSort = true;
-        this.stateActive = 'Semua buku';
+        this.stateActive = this.attributes.category ? this.attributes.category.value : 'Semua buku';
+        this.stateFilter = 'Populer';
     }
     setStateActive(key){
         this.stateActive = key;
+        this._render();
+    }
+    setStateFilter(key){
+        this.stateFilter = key;
         this._render();
     }
     toogleStateSort(){
@@ -20,11 +25,24 @@ class ViewBooksPage extends HTMLElement {
         this._render();
     }
     _render(){
-        this.__lists = DataSource.getTrend(10);
+        switch(this.stateFilter){
+            case 'Populer':
+                this.__lists = this.stateSort ? DataSource.getPopular(10, true, this.stateActive) : DataSource.getPopular(10, false, this.stateActive);
+                break;
+            case 'Rating':
+                this.__lists = this.stateSort ? DataSource.getRating(10, true, this.stateActive) : DataSource.getRating(10, false, this.stateActive);
+                break;
+            case 'Terbaru':
+                this.__lists = this.stateSort ? DataSource.getNewest(10, true, this.stateActive) : DataSource.getNewest(10, false, this.stateActive);
+                break;
+            default:
+                this.__lists = this.stateSort ? DataSource.getPopular(10, true, this.stateActive) : DataSource.getPopular(10, false, this.stateActive);
+                break;
+        }
         this.innerHTML = `
         <div class="w-full flex flex-col gap-y-8 lg:gap-y-14 py-8 lg:py-10">
             <div class="w-full flex justify-between items-center px-5 lg:px-24">
-                <filter-selection></filter-selection>
+                <filter-selection stateFilter="${this.stateFilter}"></filter-selection>
                 <div class="w-fit hidden-m">
                     <categories-bar stateActive="${this.stateActive}"></categories-bar>
                 </div>
@@ -82,6 +100,10 @@ class ViewBooksPage extends HTMLElement {
         }));
         this.querySelectorAll('.sort-button').forEach((val) => val.addEventListener('click', () => {
             this.toogleStateSort()
+        }));
+        this.querySelectorAll('.filter-list').forEach((val) => val.addEventListener('click', () => {
+            console.log(val.childNodes[1]);
+            this.setStateFilter(val.childNodes[1].innerText);
         }));
     }
 }

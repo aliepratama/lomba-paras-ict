@@ -25,7 +25,7 @@ class CategoriesSection extends HTMLElement {
                 ${
                 String(categories.map((val) => {
                     return `
-                    <div class="w-[140px] py-4 flex flex-col items-center gap-y-6 cursor-pointer transition-all hover:scale-105">
+                    <div key="${val.name}" class="route-category w-[140px] py-4 flex flex-col items-center gap-y-6 cursor-pointer transition-all hover:scale-105">
                         <img 
                         class="max-w-20"
                         src="${val.icon}"

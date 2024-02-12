@@ -17,6 +17,7 @@ class Router extends HTMLElement {
             {
                 route: 'trending',
                 component: 'viewbooks-page',
+                prop: 'category',
             },
         ];
     }
@@ -25,8 +26,9 @@ class Router extends HTMLElement {
     }
     _render(){
         let page = this.__config.filter(val => this.attributes.route.value === val.route);
+        let prop = page.at(0).prop && this.attributes[page.at(0).prop] ? `${page.at(0).prop}="${this.attributes[page.at(0).prop].value}"` : '';
         if(page.length){
-            this.innerHTML = `<${page.at(0).component}></${page.at(0).component}>`;
+            this.innerHTML = `<${page.at(0).component} ${prop}></${page.at(0).component}>`;
         } else {
             this.innerHTML = '';
         }
