@@ -13,6 +13,7 @@ class Router extends HTMLElement {
             {
                 route: 'direktori',
                 component: 'search-page',
+                prop: 'stateKeyword',
             },
             {
                 route: 'trending',

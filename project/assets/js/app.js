@@ -41,11 +41,14 @@ class App extends HTMLElement {
         document.querySelectorAll('.route-category').forEach(val => val.addEventListener('click', () => {
             this.setStateNavbar('trending', 'category', val.getAttribute('key'));
         }));
+        this.querySelector('#submitSearch').addEventListener('click', () => {
+            this.setStateNavbar('direktori', 'stateKeyword', this.querySelector('#search-input').value);
+        });
         // console.log(document.querySelectorAll('.route-sidebar'));
-        document.querySelectorAll('.route-sidebar').forEach(val => val.addEventListener('click', () => {
+        //document.querySelectorAll('.route-sidebar').forEach(val => val.addEventListener('click', () => {
             // console.log(val);
-            this.setStateNavbar(val.getAttribute('key'));
-        }));
+            // this.setStateNavbar(val.getAttribute('key'));
+        //}));
     }
 }
 document.addEventListener('DOMContentLoaded', () => {
