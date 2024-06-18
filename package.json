@@ -1,15 +1,17 @@
 {
-  "name": "lomba-paras-ict",
-  "version": "1.0.0",
-  "description": "Repo untuk menyimpan projek web design untuk lomba PARAS ICT IX dari INSTIKI",
-  "main": "index.js",
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.2.0"
+  },
   "dependencies": {
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.4"
   }
 }

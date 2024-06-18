@@ -15,7 +15,7 @@ class AuthorSection extends HTMLElement {
         }
         temp += `</div></div>`;
         this.innerHTML = temp;
-        this.querySelectorAll('.author').forEach((val, key) => val.style.backgroundImage = `url('./assets/public/author${key + 1}.png')`);
+        this.querySelectorAll('.author').forEach((val, key) => val.style.backgroundImage = `url('./author${key + 1}.png')`);
         new Swiper('.swiper-2', {
             autoplay: {
                 delay: 3000,

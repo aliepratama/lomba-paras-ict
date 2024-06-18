@@ -29,7 +29,7 @@ class Footer extends HTMLElement {
                 <div>
                     <img
                     class="max-h-14 lg:max-h-20 w-auto"
-                    src="assets/public/logo_white.png" 
+                    src="logo_white.png" 
                     alt="Logo eLibrary white"/>
                 </div>
                 <div class="flex flex-col">

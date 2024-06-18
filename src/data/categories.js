@@ -1,42 +1,42 @@
 const categories = [
     {
         name: 'Umum',
-        icon: 'assets/public/k09.png',
+        icon: 'k09.png',
         route: true,
     },
     {
         name: 'Filsafat',
-        icon: 'assets/public/k05.png',
+        icon: 'k05.png',
         route: true,
     },
     {
         name: 'Psikologi',
-        icon: 'assets/public/k06.png',
+        icon: 'k06.png',
         route: true,
     },
     {
         name: 'Agama',
-        icon: 'assets/public/k04.png',
+        icon: 'k04.png',
         route: true,
     },
     {
         name: 'Sosial',
-        icon: 'assets/public/k07.png',
+        icon: 'k07.png',
         route: true,
     },
     {
         name: 'Bahasa',
-        icon: 'assets/public/k03.png',
+        icon: 'k03.png',
         route: false,
     },
     {
         name: 'Sains',
-        icon: 'assets/public/k08.png',
+        icon: 'k08.png',
         route: false,
     },
     {
         name: 'Teknologi',
-        icon: 'assets/public/k02.png',
+        icon: 'k02.png',
         route: false,
     },
 ];

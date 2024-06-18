@@ -22,11 +22,11 @@ class NavBar extends HTMLElement {
                     <i id="sidebar" class="hidden-lg fa fa-bars button-span-rg"></i>
                     <img
                         class="max-h-6 hidden-lg" 
-                        src="assets/public/minilogo.png" 
+                        src="minilogo.png" 
                         alt="Logo eLibrary"/>
                     <img
                         class="max-h-12 hidden-m" 
-                        src="assets/public/logo.png" 
+                        src="logo.png" 
                         alt="Logo eLibrary"/>
                     ${
                         String(this.__tabs.map((val) => {

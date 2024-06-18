@@ -60,7 +60,7 @@ const books = [
 ];
 books.map((val, index) => {
         val.id = index + 1;
-        val.image = `./assets/public/book${val.id}.png`;
+        val.image = `./book${val.id}.png`;
         val.randomTrend = Math.random();
         val.rating = randomInt(41, 49) / 10;
         return val;

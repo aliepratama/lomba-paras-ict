@@ -37,7 +37,7 @@ class SideBar extends HTMLElement {
                 <div>
                     <img
                         class="max-h-10" 
-                        src="assets/public/logo.png" 
+                        src="logo.png" 
                         alt="Logo eLibrary"/>
                 </div>
             </div>

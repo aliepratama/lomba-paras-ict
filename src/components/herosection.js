@@ -23,7 +23,7 @@ class HeroSection extends HTMLElement {
                 <div class="hidden-m">
                     <img 
                         class="animate-4 max-h-80"
-                        src="../project/assets/public/hero_image.png" 
+                        src="./hero_image.png" 
                         alt="Illustration woman read a book"/>
                 </div>
             </div>

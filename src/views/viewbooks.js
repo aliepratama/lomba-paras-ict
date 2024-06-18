@@ -101,7 +101,7 @@ class ViewBooksPage extends HTMLElement {
                     <div>
                         <img 
                         class="animate-4 max-h-80"
-                        src="../project/assets/public/not_found.png" 
+                        src="../project/assets/not_found.png" 
                         alt="Illustration man looking for a book"/>
                     </div>
                     <span class="regular-text text-fblack">Tidak ditemukan buku!</span>
